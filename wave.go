@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-type Note struct {
+type Tone struct {
 	Name      string
 	Frequency float64
 }
@@ -18,18 +18,23 @@ type WaveTable struct {
 	WaveForm []float32
 }
 
-func (s WaveTable) Value(phase float64, note Note, effect Effect) float32 {
+func (s WaveTable) Value(tick uint64, note Note, effect Effect) float32 {
 	// Sawtooth wave ranges from -1 to 1 over one period
 	samples := len(s.WaveForm)
-	period := 44100 / note.Frequency
-	pos := int(phase) % int(period)
+	period := baseRate / note.Tone.Frequency
+	pos := tick % uint64(period)
 	percent := float64(pos) / period
 	index := int(percent * float64(samples))
 	if index >= samples {
 		index = samples - 1
 	}
 	x := s.WaveForm[index]
-	fmt.Println(index)
+	attack_level := float32(tick-note.Start) / float32(note.Attack)
+	if attack_level > 1.0 {
+		attack_level = 1.0
+	}
+	x *= attack_level
+	fmt.Printf("%d: %d (%f) = %f\n", tick, index, attack_level, x)
 	if effect == nil {
 		return x
 	}
@@ -66,7 +71,7 @@ func load(path string) WaveTable {
 				// Found first non-white pixel in this column
 				// You can process/store (x, y) or color as needed here
 				found = true
-				values = append(values, float32(y))
+				values[x] = float32(y)
 				break
 			}
 		}
