@@ -41,15 +41,26 @@ var notes = []Tone{
 	E6, F5,
 }
 
-var instrument = load("WaveForms/test.png")
+var instrument1 = load("WaveForms/test.png")
+var piano = load("WaveForms/piano.png")
+var violin = load("WaveForms/violin.png")
 var seconds int
 
 var tape = map[uint64][]Note{
 	0: {
-		{Tone: C4, End: 30000},
+		{Tone: C4, End: 10000, Attack: 10000, Release: 30000, Instrument: &instrument1},
 	},
 	60000: {
-		{Tone: E4, End: 20000},
+		{Tone: E4, End: 1000, Attack: 10, Release: 5000, Instrument: &piano},
+	},
+	70000: {
+		{Tone: E4, End: 1000, Attack: 10, Release: 5000, Instrument: &piano},
+	},
+	80000: {
+		{Tone: E4, End: 1000, Attack: 10, Release: 5000, Instrument: &piano},
+	},
+	90000: {
+		{Tone: E4, End: 40000, Attack: 10000, Release: 10000, Instrument: &violin},
 	},
 }
 var nextNoteID uint64
@@ -65,17 +76,17 @@ func synth(out []float32) (int, error) {
 		if ok {
 			delete(tape, coreTick)
 			for _, note := range note {
-				note.id = nextNoteID
+				note.ID = nextNoteID
 				note.Start = coreTick
 				note.End += coreTick
 				nextNoteID++
-				activeNotes[note.id] = note
+				activeNotes[note.ID] = note
 				fmt.Printf("Note %s starting at %d and going till %d", note.Tone.Name, coreTick, note.End)
 			}
 		}
 		for id, n := range activeNotes {
-			x := instrument.Value(coreTick, n, nil)
-			if n.End < coreTick {
+			x, ok := n.Instrument.Value(coreTick, n, nil)
+			if !ok {
 				delete(activeNotes, id)
 				fmt.Printf("Note %s ending at %d. %d left\n", n.Tone.Name, coreTick, len(activeNotes))
 			}
@@ -91,12 +102,13 @@ func synth(out []float32) (int, error) {
 }
 
 type Note struct {
-	id      uint64
-	Tone    Tone
-	Start   uint64
-	End     uint64
-	Attack  uint64
-	Decay   uint64
-	Sustain float32
-	Release uint64
+	ID         uint64
+	Instrument *WaveTable
+	Tone       Tone
+	Start      uint64
+	End        uint64
+	Attack     uint64
+	Decay      uint64
+	Sustain    float32
+	Release    uint64
 }

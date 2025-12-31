@@ -18,7 +18,7 @@ type WaveTable struct {
 	WaveForm []float32
 }
 
-func (s WaveTable) Value(tick uint64, note Note, effect Effect) float32 {
+func (s WaveTable) Value(tick uint64, note Note, effect Effect) (float32, bool) {
 	// Sawtooth wave ranges from -1 to 1 over one period
 	samples := len(s.WaveForm)
 	period := baseRate / note.Tone.Frequency
@@ -34,11 +34,22 @@ func (s WaveTable) Value(tick uint64, note Note, effect Effect) float32 {
 		attack_level = 1.0
 	}
 	x *= attack_level
+	end_point := note.End
+
+	if tick >= note.End && note.Release > 0 {
+		end_point = note.End + note.Release
+		release_level := float32(end_point-tick) / float32(note.Release)
+		x *= release_level
+	}
+	cont := true
+	if tick >= end_point {
+		cont = false
+	}
 	fmt.Printf("%d: %d (%f) = %f\n", tick, index, attack_level, x)
 	if effect == nil {
-		return x
+		return x, cont
 	}
-	return effect(x)
+	return effect(x), cont
 }
 
 func load(path string) WaveTable {
