@@ -17,6 +17,14 @@ func main() {
 	}
 	defer c.Close()
 
+	for i, t := range Mary {
+		start := uint64(i * 10000)
+		tape[start] = []Note{
+			{Tone: t, End: 10, Attack: 10, Release: 5000, Instrument: &piano},
+			{Tone: t, End: 7000, Attack: 3000, Release: 3000, Instrument: &violin},
+		}
+	}
+
 	stream, err := c.NewPlayback(pulse.Float32Reader(synth), pulse.PlaybackLatency(0.1))
 	if err != nil {
 		fmt.Println(err)
@@ -46,22 +54,13 @@ var piano = load("WaveForms/piano.png")
 var violin = load("WaveForms/violin.png")
 var seconds int
 
-var tape = map[uint64][]Note{
-	0: {
-		{Tone: C4, End: 10000, Attack: 10000, Release: 30000, Instrument: &instrument1},
-	},
-	60000: {
-		{Tone: E4, End: 1000, Attack: 10, Release: 5000, Instrument: &piano},
-	},
-	70000: {
-		{Tone: E4, End: 1000, Attack: 10, Release: 5000, Instrument: &piano},
-	},
-	80000: {
-		{Tone: E4, End: 1000, Attack: 10, Release: 5000, Instrument: &piano},
-	},
-	90000: {
-		{Tone: E4, End: 40000, Attack: 10000, Release: 10000, Instrument: &violin},
-	},
+var tape = map[uint64][]Note{}
+var Mary = []Tone{
+	E5, D5, C5, D5, E5, E5, E5,
+	D5, D5, D5,
+	E5, G5, G5,
+	E5, D5, C5, D5, E5, E5, E5, E5,
+	D5, D5, E5, D5, C5,
 }
 var nextNoteID uint64
 
