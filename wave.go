@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"image/png"
 	"log"
+	"log/slog"
 	"os"
 )
 
@@ -29,23 +29,23 @@ func (s WaveTable) Value(tick uint64, note Note, effect Effect) (float32, bool) 
 		index = samples - 1
 	}
 	x := s.WaveForm[index]
-	attack_level := float32(tick-note.Start) / float32(note.Attack)
+	attack_level := float32(tick-note.Start) / float32(note.Instrument.Attack)
 	if attack_level > 1.0 {
 		attack_level = 1.0
 	}
 	x *= attack_level
 	end_point := note.End
 
-	if tick >= note.End && note.Release > 0 {
-		end_point = note.End + note.Release
-		release_level := float32(end_point-tick) / float32(note.Release)
+	if tick >= note.End && note.Instrument.Release > 0 {
+		end_point = note.End + note.Instrument.Release
+		release_level := float32(end_point-tick) / float32(note.Instrument.Release)
 		x *= release_level
 	}
 	cont := true
 	if tick >= end_point {
 		cont = false
 	}
-	fmt.Printf("%d: %d (%f) = %f\n", tick, index, attack_level, x)
+	slog.Debug("Note Playing", "tick", tick, "index", index, "attack", attack_level, "x", x)
 	if effect == nil {
 		return x, cont
 	}

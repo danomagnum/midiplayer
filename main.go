@@ -20,8 +20,8 @@ func main() {
 	for i, t := range Mary {
 		start := uint64(i * 10000)
 		tape[start] = []Note{
-			{Tone: t, End: 10, Attack: 10, Release: 5000, Instrument: &piano},
-			{Tone: t, End: 7000, Attack: 3000, Release: 3000, Instrument: &violin},
+			{Tone: t, Instrument: &piano, End: 10},
+			{Tone: t, Instrument: &violin, End: 7000},
 		}
 	}
 
@@ -49,9 +49,9 @@ var notes = []Tone{
 	E6, F5,
 }
 
-var instrument1 = load("WaveForms/test.png")
-var piano = load("WaveForms/piano.png")
-var violin = load("WaveForms/violin.png")
+var instrument1 = NewInstrument("WaveForms/test.png", 1000, 1000, 0.8, 2000)
+var piano = NewInstrument("WaveForms/piano.png", 500, 500, 0.7, 3000)
+var violin = NewInstrument("WaveForms/violin.png", 500, 500, 0.7, 3000)
 var seconds int
 
 var tape = map[uint64][]Note{}
@@ -84,7 +84,7 @@ func synth(out []float32) (int, error) {
 			}
 		}
 		for id, n := range activeNotes {
-			x, ok := n.Instrument.Value(coreTick, n, nil)
+			x, ok := n.Instrument.Wave.Value(coreTick, n, nil)
 			if !ok {
 				delete(activeNotes, id)
 				fmt.Printf("Note %s ending at %d. %d left\n", n.Tone.Name, coreTick, len(activeNotes))
@@ -102,12 +102,8 @@ func synth(out []float32) (int, error) {
 
 type Note struct {
 	ID         uint64
-	Instrument *WaveTable
+	Instrument *Instrument
 	Tone       Tone
 	Start      uint64
 	End        uint64
-	Attack     uint64
-	Decay      uint64
-	Sustain    float32
-	Release    uint64
 }
