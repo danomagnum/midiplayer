@@ -32,6 +32,8 @@ func (s WaveTable) Value(tick uint64, note Note, effect Effect) (float32, bool) 
 
 	adsr := note.Instrument.adsr(tick, note)
 	x *= adsr
+	lfo := note.Instrument.lfo(tick)
+	x *= lfo
 
 	cont := true
 	if tick >= note.End+note.Instrument.Release {

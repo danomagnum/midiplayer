@@ -22,7 +22,9 @@ func main() {
 		tape[start] = []Note{
 			//{Tone: t, Instrument: &piano, End: 100},
 			//{Tone: t, Instrument: &violin, End: 7000},
-			{Tone: t, Instrument: &trumpet, End: 7000},
+			//{Tone: t, Instrument: &trumpet, End: 7000},
+			//{Tone: t, Instrument: &fifth, End: 7000},
+			{Tone: t, Instrument: &organ, End: 7000},
 		}
 	}
 
@@ -50,10 +52,15 @@ var notes = []Tone{
 	E6, F5,
 }
 
-var instrument1 = NewInstrument("WaveForms/test.png", 1000, 1000, 0.8, 2000)
-var piano = NewInstrument("WaveForms/piano.png", 10, 30, 0.7, 3000)
-var violin = NewInstrument("WaveForms/violin.png", 2000, 0, 1, 3000)
-var trumpet = NewInstrument("WaveForms/trumpet.png", 2000, 2000, 0.5, 3000)
+var instrument1 = NewInstrument("WaveForms/test.png", 1000, 1000, 0.8, 2000, nil)
+var fifth = NewInstrument("WaveForms/fifth.png", 1000, 1000, 0.8, 2000, nil)
+var piano = NewInstrument("WaveForms/piano.png", 10, 30, 0.7, 3000, nil)
+var violin = NewInstrument("WaveForms/violin.png", 2000, 0, 1, 3000, nil)
+var organ = NewInstrument("WaveForms/organ.png", 4000, 0, 1, 4000, []LFO{
+	{Frequency: 5.0, Amplitude: 0.3},
+	{Frequency: 7.0, Amplitude: 0.1},
+})
+var trumpet = NewInstrument("WaveForms/trumpet.png", 2000, 2000, 0.5, 3000, nil)
 
 var tape = map[uint64][]Note{}
 var Mary = []Tone{
