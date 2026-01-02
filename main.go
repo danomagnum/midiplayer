@@ -20,8 +20,9 @@ func main() {
 	for i, t := range Mary {
 		start := uint64(i * 10000)
 		tape[start] = []Note{
-			{Tone: t, Instrument: &piano, End: 10},
-			{Tone: t, Instrument: &violin, End: 7000},
+			//{Tone: t, Instrument: &piano, End: 100},
+			//{Tone: t, Instrument: &violin, End: 7000},
+			{Tone: t, Instrument: &trumpet, End: 7000},
 		}
 	}
 
@@ -50,9 +51,9 @@ var notes = []Tone{
 }
 
 var instrument1 = NewInstrument("WaveForms/test.png", 1000, 1000, 0.8, 2000)
-var piano = NewInstrument("WaveForms/piano.png", 500, 500, 0.7, 3000)
-var violin = NewInstrument("WaveForms/violin.png", 500, 500, 0.7, 3000)
-var seconds int
+var piano = NewInstrument("WaveForms/piano.png", 10, 30, 0.7, 3000)
+var violin = NewInstrument("WaveForms/violin.png", 2000, 0, 1, 3000)
+var trumpet = NewInstrument("WaveForms/trumpet.png", 2000, 2000, 0.5, 3000)
 
 var tape = map[uint64][]Note{}
 var Mary = []Tone{
@@ -80,7 +81,7 @@ func synth(out []float32) (int, error) {
 				note.End += coreTick
 				nextNoteID++
 				activeNotes[note.ID] = note
-				fmt.Printf("Note %s starting at %d and going till %d", note.Tone.Name, coreTick, note.End)
+				fmt.Printf("Note %s starting at %d and going till %d\n", note.Tone.Name, coreTick, note.End)
 			}
 		}
 		for id, n := range activeNotes {
