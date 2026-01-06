@@ -10,6 +10,10 @@ import (
 const baseRate = 44100
 
 func main() {
+
+	LoadMIDIFile("MidiFiles/test.mid")
+	return
+
 	c, err := pulse.NewClient()
 	if err != nil {
 		fmt.Println(err)
