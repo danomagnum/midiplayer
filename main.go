@@ -11,7 +11,7 @@ const baseRate = 44100
 
 func main() {
 
-	notes, err := LoadMIDIFile("MidiFiles/chords.mid")
+	songData, err := LoadMIDIFile("MidiFiles/chords.mid")
 	if err != nil {
 		fmt.Println("Error loading MIDI file:", err)
 		return
@@ -25,9 +25,10 @@ func main() {
 	}
 	defer c.Close()
 
-	for _, t := range notes {
+	i := DefaultInstruments[23]
+	for _, t := range songData.notes {
 		l, ok := tape[t.Start]
-		t.Instrument = &organ
+		t.Instrument = &i
 		if ok {
 			l = append(l, t)
 			tape[t.Start] = l
@@ -59,16 +60,6 @@ var coreTick uint64
 var notes = []Tone{
 	E6, F5,
 }
-
-var instrument1 = NewInstrument("WaveForms/test.png", 1000, 1000, 0.8, 2000, nil)
-var fifth = NewInstrument("WaveForms/fifth.png", 1000, 1000, 0.8, 2000, nil)
-var piano = NewInstrument("WaveForms/piano.png", 1000, 1000, 0.3, 100, nil)
-var violin = NewInstrument("WaveForms/violin.png", 2000, 0, 1, 3000, nil)
-var organ = NewInstrument("WaveForms/organ.png", 4000, 0, 1, 4000, []LFO{
-	{Frequency: 5.0, Amplitude: 0.1},
-	{Frequency: 7.0, Amplitude: 0.1},
-})
-var trumpet = NewInstrument("WaveForms/trumpet.png", 2000, 2000, 0.5, 3000, nil)
 
 var tape = map[uint64][]Note{}
 var Mary = []Tone{

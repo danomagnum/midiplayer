@@ -22,7 +22,7 @@ func (m *midiTrackData) scaleFactor() float64 {
 	return (baseRate) * tempo / float64(m.timeDivision)
 }
 
-func LoadMIDIFile(path string) ([]Note, error) {
+func LoadMIDIFile(path string) (*midiTrackData, error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, err
@@ -207,7 +207,8 @@ func LoadMIDIFile(path string) ([]Note, error) {
 		}
 
 	}
-	return notes, nil
+	songData.notes = notes
+	return &songData, nil
 }
 
 type MIDIHeader struct {
