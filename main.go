@@ -11,8 +11,12 @@ const baseRate = 44100
 
 func main() {
 
-	LoadMIDIFile("MidiFiles/test.mid")
-	return
+	notes, err := LoadMIDIFile("MidiFiles/simple.mid")
+	if err != nil {
+		fmt.Println("Error loading MIDI file:", err)
+		return
+	}
+	_ = notes
 
 	c, err := pulse.NewClient()
 	if err != nil {
@@ -21,15 +25,19 @@ func main() {
 	}
 	defer c.Close()
 
-	for i, t := range Mary {
-		start := uint64(i * 10000)
-		tape[start] = []Note{
-			//{Tone: t, Instrument: &piano, End: 100},
-			//{Tone: t, Instrument: &violin, End: 7000},
-			//{Tone: t, Instrument: &trumpet, End: 7000},
-			//{Tone: t, Instrument: &fifth, End: 7000},
-			{Tone: t, Instrument: &organ, End: 7000},
+	for _, t := range notes {
+		start := t.Start * uint64(baseRate) / 960
+		t.Start = start
+		end := t.End
+		t.End = end
+		l, ok := tape[t.Start]
+		t.Instrument = &piano
+		if ok {
+			l = append(l, t)
+			tape[t.Start] = l
+			continue
 		}
+		tape[t.Start] = []Note{t}
 	}
 
 	stream, err := c.NewPlayback(pulse.Float32Reader(synth), pulse.PlaybackLatency(0.1))

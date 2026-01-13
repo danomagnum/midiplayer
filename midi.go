@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
+	"math"
 	"os"
 )
 
@@ -174,7 +175,7 @@ func LoadMIDIFile(path string) ([]Note, error) {
 	}
 
 	notes := []Note{}
-	for noteID, noteEvents := range songData[1] {
+	for noteID, noteEvents := range songData[0] {
 		var currentNote Note
 		currentNote.Tone = MidiNoteToTone(noteID)
 		for _, event := range noteEvents {
@@ -187,7 +188,7 @@ func LoadMIDIFile(path string) ([]Note, error) {
 		}
 
 	}
-	return nil, nil
+	return notes, nil
 }
 
 type MIDIHeader struct {
@@ -223,17 +224,9 @@ func MidiNoteToTone(noteNumber int) Tone {
 	octave := (noteNumber / 12) - 1
 	noteIndex := noteNumber % 12
 	noteName := fmt.Sprintf("%s%d", noteNames[noteIndex], octave)
-	frequency := 440.0 * pow(2, float64(noteNumber-69)/12.0)
+	frequency := 440.0 * math.Pow(2, float64(noteNumber-69)/12.0)
 	return Tone{
 		Name:      noteName,
 		Frequency: frequency,
 	}
-}
-
-func pow(base, exp float64) float64 {
-	result := 1.0
-	for i := 0; i < int(exp); i++ {
-		result *= base
-	}
-	return result
 }
