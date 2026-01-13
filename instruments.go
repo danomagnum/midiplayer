@@ -49,6 +49,16 @@ var accordion = NewInstrument("WaveForms/generated/accordion.png", 700, 300, 0.8
 var harmonica = NewInstrument("WaveForms/generated/harmonica.png", 300, 100, 0.7, 600, []LFO{{Frequency: 5.5, Amplitude: 0.09}})                                         // Harmonica, strong vibrato
 var bandoneon = NewInstrument("WaveForms/generated/bandoneon.png", 700, 300, 0.8, 1000, []LFO{{Frequency: 6.0, Amplitude: 0.07}})                                        // Bandoneon, vibrato
 
+// MIDI instruments 25-32 (Guitars)
+var acousticGuitarNylon = NewInstrument("WaveForms/generated/acoustic_guitar_nylon.png", 60, 80, 0.85, 180, nil)                                     // Nylon, punchier
+var acousticGuitarSteel = NewInstrument("WaveForms/generated/acoustic_guitar_steel.png", 40, 60, 0.85, 150, nil)                                     // Steel, punchier
+var electricGuitarJazz = NewInstrument("WaveForms/generated/electric_guitar_jazz.png", 30, 60, 0.8, 120, nil)                                        // Jazz, punchier
+var electricGuitarClean = NewInstrument("WaveForms/generated/electric_guitar_clean.png", 20, 40, 0.8, 100, []LFO{{Frequency: 5.5, Amplitude: 0.04}}) // Clean, punchier
+var electricGuitarMuted = NewInstrument("WaveForms/generated/electric_guitar_muted.png", 10, 20, 0.4, 40, nil)                                       // Muted, very percussive
+var overdrivenGuitar = NewInstrument("WaveForms/generated/overdriven_guitar.png", 10, 20, 0.7, 60, nil)                                              // Overdriven, punchier
+var distortionGuitar = NewInstrument("WaveForms/generated/distortion_guitar.png", 10, 20, 0.6, 60, nil)                                              // Distortion, punchier
+var guitarHarmonics = NewInstrument("WaveForms/generated/guitar_harmonics.png", 30, 40, 0.85, 100, nil)                                              // Harmonics, punchier
+
 var DefaultInstruments = map[int]Instrument{
 	1:  piano,
 	2:  brightAcousticPiano,
@@ -75,6 +85,14 @@ var DefaultInstruments = map[int]Instrument{
 	22: accordion,
 	23: harmonica,
 	24: bandoneon,
+	25: acousticGuitarNylon,
+	26: acousticGuitarSteel,
+	27: electricGuitarJazz,
+	28: electricGuitarClean,
+	29: electricGuitarMuted,
+	30: overdrivenGuitar,
+	31: distortionGuitar,
+	32: guitarHarmonics,
 	40: violin,
 	48: stringEnsemble1,
 	49: stringEnsemble2,
