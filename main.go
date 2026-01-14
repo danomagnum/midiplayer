@@ -11,7 +11,7 @@ const baseRate = 44100
 
 func main() {
 
-	songData, err := LoadMIDIFile("MidiFiles/dundun.mid")
+	songData, err := LoadMIDIFile("MidiFiles/up.mid")
 	if err != nil {
 		fmt.Println("Error loading MIDI file:", err)
 		return
@@ -25,7 +25,7 @@ func main() {
 	}
 	defer c.Close()
 
-	i := DefaultInstruments[37]
+	i := DefaultInstruments[45]
 	for _, t := range songData.notes {
 		l, ok := tape[t.Start]
 		t.Instrument = &i
