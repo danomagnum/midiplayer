@@ -1,6 +1,6 @@
 {
   "Name": "Trumpet",
-  "ID": 56,
+  "ID": 57,
   "WaveformPath": "WaveForms/trumpet.png",
   "Attack": 2000,
   "Decay": 2000,

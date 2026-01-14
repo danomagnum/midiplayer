@@ -1,6 +1,6 @@
 {
   "Name": "Synth Voice",
-  "ID": 54,
+  "ID": 55,
   "WaveformPath": "WaveForms/generated/synth_voice.png",
   "Attack": 1200,
   "Decay": 1000,

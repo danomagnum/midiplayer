@@ -21,18 +21,23 @@ var DefaultInstruments = map[int]Instrument{}
 
 // TODO: eventually we'll want to go:embed these files both the json definitions and the waveform pngs
 func init() {
-	dir, err := os.ReadDir("instruments")
+	loadInstrumentsFromDir("instruments")
+}
+
+func loadInstrumentsFromDir(dirname string) {
+	dir, err := os.ReadDir(dirname)
 	if err != nil {
 		panic(err)
 	}
 	for _, file := range dir {
 		if file.IsDir() {
+			loadInstrumentsFromDir(dirname + "/" + file.Name())
 			continue
 		}
 		if !strings.HasSuffix(file.Name(), ".json") {
 			continue
 		}
-		jsonFile, err := os.ReadFile("instruments/" + file.Name())
+		jsonFile, err := os.ReadFile(dirname + "/" + file.Name())
 		if err != nil {
 			panic(err)
 		}
