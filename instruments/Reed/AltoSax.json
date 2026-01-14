@@ -1,0 +1,10 @@
+{
+  "Name": "Alto Sax",
+  "ID": 66,
+  "WaveformPath": "WaveForms/generated/alto_sax.png",
+  "Attack": 900,
+  "Decay": 1100,
+  "Sustain": 0.7,
+  "Release": 1300,
+  "LFOs": null
+}

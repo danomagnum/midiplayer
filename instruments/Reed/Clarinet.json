@@ -1,0 +1,10 @@
+{
+  "Name": "Clarinet",
+  "ID": 72,
+  "WaveformPath": "WaveForms/generated/clarinet.png",
+  "Attack": 700,
+  "Decay": 900,
+  "Sustain": 0.7,
+  "Release": 1100,
+  "LFOs": null
+}

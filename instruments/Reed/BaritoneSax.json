@@ -1,0 +1,10 @@
+{
+  "Name": "Baritone Sax",
+  "ID": 68,
+  "WaveformPath": "WaveForms/generated/baritone_sax.png",
+  "Attack": 1100,
+  "Decay": 1300,
+  "Sustain": 0.7,
+  "Release": 1500,
+  "LFOs": null
+}
