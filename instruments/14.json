@@ -1,0 +1,10 @@
+{
+  "Name": "Xylophone",
+  "ID": 14,
+  "WaveformPath": "WaveForms/generated/xylophone.png",
+  "Attack": 100,
+  "Decay": 100,
+  "Sustain": 0.5,
+  "Release": 80,
+  "LFOs": null
+}

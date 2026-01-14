@@ -1,0 +1,10 @@
+{
+  "Name": "Celesta",
+  "ID": 9,
+  "WaveformPath": "WaveForms/generated/celesta.png",
+  "Attack": 200,
+  "Decay": 200,
+  "Sustain": 0.7,
+  "Release": 100,
+  "LFOs": null
+}

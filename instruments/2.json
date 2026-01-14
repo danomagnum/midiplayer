@@ -1,0 +1,10 @@
+{
+  "Name": "Bright Acoustic Piano",
+  "ID": 2,
+  "WaveformPath": "WaveForms/generated/bright_acoustic_piano.png",
+  "Attack": 800,
+  "Decay": 800,
+  "Sustain": 0.4,
+  "Release": 200,
+  "LFOs": null
+}

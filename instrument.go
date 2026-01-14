@@ -50,7 +50,7 @@ func (inst *Instrument) adsr(tick uint64, note Note) float32 {
 		if release_level < 0 {
 			release_level = 0
 		}
-		return release_level
+		return release_level * inst.Sustain
 	default:
 		return 0.0
 	}

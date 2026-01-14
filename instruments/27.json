@@ -1,0 +1,10 @@
+{
+  "Name": "Electric Guitar Jazz",
+  "ID": 27,
+  "WaveformPath": "WaveForms/generated/electric_guitar_jazz.png",
+  "Attack": 400,
+  "Decay": 2000,
+  "Sustain": 0.8,
+  "Release": 120,
+  "LFOs": null
+}

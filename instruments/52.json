@@ -1,0 +1,10 @@
+{
+  "Name": "Choir Aahs",
+  "ID": 52,
+  "WaveformPath": "WaveForms/generated/choir_aahs.png",
+  "Attack": 3000,
+  "Decay": 2000,
+  "Sustain": 0.9,
+  "Release": 4000,
+  "LFOs": null
+}

@@ -1,0 +1,12 @@
+{
+  "Name": "Church Organ",
+  "ID": 20,
+  "WaveformPath": "WaveForms/generated/church_organ.png",
+  "Attack": 2000,
+  "Decay": 0,
+  "Sustain": 1.0,
+  "Release": 4000,
+  "LFOs": [
+    {"Frequency": 5.0, "Amplitude": 0.03}
+  ]
+}

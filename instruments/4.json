@@ -1,0 +1,10 @@
+{
+  "Name": "Honky Tonk Piano",
+  "ID": 4,
+  "WaveformPath": "WaveForms/generated/honky_tonk_piano.png",
+  "Attack": 900,
+  "Decay": 900,
+  "Sustain": 0.3,
+  "Release": 150,
+  "LFOs": null
+}

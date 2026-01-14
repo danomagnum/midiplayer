@@ -1,0 +1,10 @@
+{
+  "Name": "Synth Strings 2",
+  "ID": 51,
+  "WaveformPath": "WaveForms/generated/synthstrings_2.png",
+  "Attack": 800,
+  "Decay": 800,
+  "Sustain": 0.7,
+  "Release": 1500,
+  "LFOs": null
+}

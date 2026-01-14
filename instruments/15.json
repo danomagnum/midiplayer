@@ -1,0 +1,10 @@
+{
+  "Name": "Tubular Bells",
+  "ID": 15,
+  "WaveformPath": "WaveForms/generated/tubular_bells.png",
+  "Attack": 400,
+  "Decay": 400,
+  "Sustain": 0.8,
+  "Release": 300,
+  "LFOs": null
+}

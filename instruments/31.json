@@ -1,0 +1,10 @@
+{
+  "Name": "Distortion Guitar",
+  "ID": 31,
+  "WaveformPath": "WaveForms/generated/distortion_guitar.png",
+  "Attack": 400,
+  "Decay": 2000,
+  "Sustain": 0.1,
+  "Release": 60,
+  "LFOs": null
+}

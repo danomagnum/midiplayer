@@ -1,0 +1,10 @@
+{
+  "Name": "String Ensemble 2",
+  "ID": 49,
+  "WaveformPath": "WaveForms/generated/string_ensemble_2.png",
+  "Attack": 1500,
+  "Decay": 800,
+  "Sustain": 0.6,
+  "Release": 2500,
+  "LFOs": null
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "Guitar Harmonics",
+  "ID": 32,
+  "WaveformPath": "WaveForms/generated/guitar_harmonics.png",
+  "Attack": 400,
+  "Decay": 2000,
+  "Sustain": 0.85,
+  "Release": 100,
+  "LFOs": null
+}

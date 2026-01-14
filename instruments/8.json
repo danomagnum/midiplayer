@@ -1,0 +1,10 @@
+{
+  "Name": "Clavinet",
+  "ID": 8,
+  "WaveformPath": "WaveForms/generated/clavinet.png",
+  "Attack": 100,
+  "Decay": 100,
+  "Sustain": 0.6,
+  "Release": 80,
+  "LFOs": null
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "Electric Piano 2",
+  "ID": 6,
+  "WaveformPath": "WaveForms/generated/electric_piano_2.png",
+  "Attack": 1000,
+  "Decay": 1000,
+  "Sustain": 0.5,
+  "Release": 300,
+  "LFOs": null
+}

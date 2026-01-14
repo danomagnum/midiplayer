@@ -1,0 +1,12 @@
+{
+  "Name": "Electric Guitar Clean",
+  "ID": 28,
+  "WaveformPath": "WaveForms/generated/electric_guitar_clean.png",
+  "Attack": 400,
+  "Decay": 2000,
+  "Sustain": 0.8,
+  "Release": 100,
+  "LFOs": [
+    {"Frequency": 5.5, "Amplitude": 0.04}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "Orchestra Hit",
+  "ID": 55,
+  "WaveformPath": "WaveForms/generated/orchestra_hit.png",
+  "Attack": 100,
+  "Decay": 100,
+  "Sustain": 0.5,
+  "Release": 500,
+  "LFOs": null
+}

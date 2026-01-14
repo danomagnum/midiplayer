@@ -1,0 +1,12 @@
+{
+  "Name": "Rock Organ",
+  "ID": 19,
+  "WaveformPath": "WaveForms/generated/rock_organ.png",
+  "Attack": 600,
+  "Decay": 200,
+  "Sustain": 0.8,
+  "Release": 1000,
+  "LFOs": [
+    {"Frequency": 6.0, "Amplitude": 0.07}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "Music Box",
+  "ID": 11,
+  "WaveformPath": "WaveForms/generated/music_box.png",
+  "Attack": 150,
+  "Decay": 150,
+  "Sustain": 0.5,
+  "Release": 100,
+  "LFOs": null
+}
