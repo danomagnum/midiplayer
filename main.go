@@ -25,7 +25,7 @@ func main() {
 	}
 	defer c.Close()
 
-	i := DefaultInstruments[45]
+	i := DefaultInstruments[64]
 	for _, t := range songData.notes {
 		l, ok := tape[t.Start]
 		t.Instrument = &i

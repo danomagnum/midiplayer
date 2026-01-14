@@ -1,0 +1,10 @@
+{
+  "Name": "Trombone",
+  "ID": 58,
+  "WaveformPath": "WaveForms/generated/trombone.png",
+  "Attack": 2000,
+  "Decay": 1000,
+  "Sustain": 0.8,
+  "Release": 2000,
+  "LFOs": null
+}

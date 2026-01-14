@@ -1,0 +1,10 @@
+{
+  "Name": "French Horn",
+  "ID": 61,
+  "WaveformPath": "WaveForms/generated/french_horn.png",
+  "Attack": 2500,
+  "Decay": 1200,
+  "Sustain": 0.7,
+  "Release": 2200,
+  "LFOs": null
+}

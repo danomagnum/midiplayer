@@ -1,0 +1,10 @@
+{
+  "Name": "Synth Brass 2",
+  "ID": 64,
+  "WaveformPath": "WaveForms/generated/synth_brass_2.png",
+  "Attack": 1000,
+  "Decay": 800,
+  "Sustain": 0.9,
+  "Release": 1200,
+  "LFOs": null
+}
