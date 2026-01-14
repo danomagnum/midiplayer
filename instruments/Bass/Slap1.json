@@ -1,0 +1,10 @@
+{
+  "Name": "Slap Bass 1",
+  "ID": 37,
+  "WaveformPath": "WaveForms/generated/slap_bass_1.png",
+  "Attack": 200,
+  "Decay": 1000,
+  "Sustain": 0.6,
+  "Release": 100,
+  "LFOs": null
+}

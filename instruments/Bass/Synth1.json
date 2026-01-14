@@ -1,0 +1,10 @@
+{
+  "Name": "Synth Bass 1",
+  "ID": 39,
+  "WaveformPath": "WaveForms/generated/synth_bass_1.png",
+  "Attack": 100,
+  "Decay": 800,
+  "Sustain": 0.8,
+  "Release": 80,
+  "LFOs": null
+}

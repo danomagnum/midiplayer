@@ -1,0 +1,10 @@
+{
+  "Name": "Electric Bass (finger)",
+  "ID": 34,
+  "WaveformPath": "WaveForms/generated/electric_bass_finger.png",
+  "Attack": 400,
+  "Decay": 2000,
+  "Sustain": 0.7,
+  "Release": 200,
+  "LFOs": null
+}
