@@ -19,6 +19,7 @@ type InstrumentDefinition struct {
 
 var DefaultInstruments = map[int]Instrument{}
 
+// TODO: eventually we'll want to go:embed these files both the json definitions and the waveform pngs
 func init() {
 	dir, err := os.ReadDir("instruments")
 	if err != nil {
