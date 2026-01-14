@@ -1,0 +1,10 @@
+{
+  "Name": "Bowed",
+  "ID": 93,
+  "WaveformPath": "WaveForms/generated/bowed.png",
+  "Attack": 2000,
+  "Decay": 2000,
+  "Sustain": 0.8,
+  "Release": 3000,
+  "LFOs": null
+}

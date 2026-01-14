@@ -1,0 +1,10 @@
+{
+  "Name": "New Age",
+  "ID": 89,
+  "WaveformPath": "WaveForms/generated/new_age.png",
+  "Attack": 2000,
+  "Decay": 2000,
+  "Sustain": 0.8,
+  "Release": 3000,
+  "LFOs": null
+}
