@@ -1,0 +1,10 @@
+{
+  "Name": "Whistle",
+  "ID": 79,
+  "WaveformPath": "WaveForms/generated/whistle.png",
+  "Attack": 200,
+  "Decay": 400,
+  "Sustain": 0.7,
+  "Release": 300,
+  "LFOs": null
+}

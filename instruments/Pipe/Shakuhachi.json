@@ -1,0 +1,10 @@
+{
+  "Name": "Shakuhachi",
+  "ID": 78,
+  "WaveformPath": "WaveForms/generated/shakuhachi.png",
+  "Attack": 200,
+  "Decay": 400,
+  "Sustain": 0.7,
+  "Release": 300,
+  "LFOs": null
+}

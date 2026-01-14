@@ -1,0 +1,10 @@
+{
+  "Name": "Pan Flute",
+  "ID": 76,
+  "WaveformPath": "WaveForms/generated/pan_flute.png",
+  "Attack": 200,
+  "Decay": 400,
+  "Sustain": 0.7,
+  "Release": 300,
+  "LFOs": null
+}
