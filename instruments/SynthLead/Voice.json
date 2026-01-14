@@ -1,0 +1,10 @@
+{
+  "Name": "Voice",
+  "ID": 86,
+  "WaveformPath": "WaveForms/generated/voice.png",
+  "Attack": 100,
+  "Decay": 200,
+  "Sustain": 0.7,
+  "Release": 100,
+  "LFOs": null
+}
