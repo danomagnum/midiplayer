@@ -1,0 +1,82 @@
+[
+	{
+		"Name": "Violin",
+		"ID": 41,
+		"WaveformPath": "WaveForms/generated/violin.png",
+		"Attack": 2000,
+		"Decay": 0,
+		"Sustain": 1.0,
+		"Release": 3000,
+		"LFOs": null
+	},
+	{
+		"Name": "Viola",
+		"ID": 42,
+		"WaveformPath": "WaveForms/generated/viola.png",
+		"Attack": 2000,
+		"Decay": 0,
+		"Sustain": 1.0,
+		"Release": 3000,
+		"LFOs": null
+	},
+	{
+		"Name": "Cello",
+		"ID": 43,
+		"WaveformPath": "WaveForms/generated/cello.png",
+		"Attack": 2000,
+		"Decay": 0,
+		"Sustain": 1.0,
+		"Release": 3000,
+		"LFOs": null
+	},
+	{
+		"Name": "Contrabass",
+		"ID": 44,
+		"WaveformPath": "WaveForms/generated/contrabass.png",
+		"Attack": 2000,
+		"Decay": 0,
+		"Sustain": 1.0,
+		"Release": 3000,
+		"LFOs": null
+	},
+	{
+		"Name": "Tremolo Strings",
+		"ID": 45,
+		"WaveformPath": "WaveForms/generated/violin.png",
+		"Attack": 1000,
+		"Decay": 0,
+		"Sustain": 1.0,
+		"Release": 2000,
+		"LFOs": [{"Frequency": 8.0, "Amplitude": 0.2}]
+	},
+	{
+		"Name": "Pizzicato Strings",
+		"ID": 46,
+		"WaveformPath": "WaveForms/generated/pizzicato_strings.png",
+		"Attack": 100,
+		"Decay": 200,
+		"Sustain": 0.5,
+		"Release": 100,
+		"LFOs": null
+	},
+	{
+		"Name": "Orchestral Harp",
+		"ID": 47,
+		"WaveformPath": "WaveForms/generated/orchestral_harp.png",
+		"Attack": 200,
+		"Decay": 1000,
+		"Sustain": 0.7,
+		"Release": 500,
+		"LFOs": null
+	},
+	{
+		"Name": "Timpani",
+		"ID": 48,
+		"WaveformPath": "WaveForms/generated/timpani.png",
+		"Attack": 100,
+		"Decay": 800,
+		"Sustain": 0.6,
+		"Release": 200,
+		"LFOs": null
+	}
+]

@@ -1,0 +1,99 @@
+[
+    {
+		"Name": "Organ",
+		"ID": 17,
+		"WaveformPath": "WaveForms/organ.png",
+		"Attack": 4000,
+		"Decay": 0,
+		"Sustain": 1.0,
+		"Release": 4000,
+		"LFOs": [
+			{"Frequency": 5.0, "Amplitude": 0.1},
+			{"Frequency": 7.0, "Amplitude": 0.1}
+		]
+	},
+	{
+		"Name": "Percussive Organ",
+		"ID": 18,
+		"WaveformPath": "WaveForms/generated/percussive_organ.png",
+		"Attack": 400,
+		"Decay": 200,
+		"Sustain": 0.7,
+		"Release": 800,
+		"LFOs": [
+			{"Frequency": 5.0, "Amplitude": 0.04}
+		]
+	},
+    {
+		"Name": "Rock Organ",
+		"ID": 19,
+		"WaveformPath": "WaveForms/generated/rock_organ.png",
+		"Attack": 600,
+		"Decay": 200,
+		"Sustain": 0.8,
+		"Release": 1000,
+		"LFOs": [
+			{"Frequency": 6.0, "Amplitude": 0.07}
+		]
+	},
+    {
+		"Name": "Church Organ",
+		"ID": 20,
+		"WaveformPath": "WaveForms/generated/church_organ.png",
+		"Attack": 2000,
+		"Decay": 0,
+		"Sustain": 1.0,
+		"Release": 4000,
+		"LFOs": [
+			{"Frequency": 5.0, "Amplitude": 0.03}
+		]
+	},
+    {
+		"Name": "Reed Organ",
+		"ID": 21,
+		"WaveformPath": "WaveForms/generated/reed_organ.png",
+		"Attack": 800,
+		"Decay": 200,
+		"Sustain": 0.7,
+		"Release": 1200,
+		"LFOs": [
+			{"Frequency": 5.5, "Amplitude": 0.06}
+		]
+	},
+	{
+		"Name": "Accordion",
+		"ID": 22,
+		"WaveformPath": "WaveForms/generated/accordion.png",
+		"Attack": 700,
+		"Decay": 300,
+		"Sustain": 0.8,
+		"Release": 1000,
+		"LFOs": [
+			{"Frequency": 6.5, "Amplitude": 0.08}
+		]
+	},
+    {
+		"Name": "Harmonica",
+		"ID": 23,
+		"WaveformPath": "WaveForms/generated/harmonica.png",
+		"Attack": 300,
+		"Decay": 100,
+		"Sustain": 0.7,
+		"Release": 600,
+		"LFOs": [
+			{"Frequency": 5.5, "Amplitude": 0.09}
+		]
+	},
+	{
+		"Name": "Bandoneon",
+		"ID": 24,
+		"WaveformPath": "WaveForms/generated/bandoneon.png",
+		"Attack": 700,
+		"Decay": 300,
+		"Sustain": 0.8,
+		"Release": 1000,
+		"LFOs": [
+			{"Frequency": 6.0, "Amplitude": 0.07}
+		]
+	}
+]

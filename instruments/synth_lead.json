@@ -1,0 +1,82 @@
+[
+	{
+		"Name": "Square Wave",
+		"ID": 81,
+		"WaveformPath": "WaveForms/generated/square_wave.png",
+		"Attack": 100,
+		"Decay": 200,
+		"Sustain": 0.8,
+		"Release": 100,
+		"LFOs": null
+	},
+	{
+		"Name": "Sawtooth Wave",
+		"ID": 82,
+		"WaveformPath": "WaveForms/generated/sawtooth_wave.png",
+		"Attack": 100,
+		"Decay": 200,
+		"Sustain": 0.8,
+		"Release": 100,
+		"LFOs": null
+	},
+	{
+		"Name": "Calliope",
+		"ID": 83,
+		"WaveformPath": "WaveForms/generated/calliope.png",
+		"Attack": 100,
+		"Decay": 200,
+		"Sustain": 0.7,
+		"Release": 100,
+		"LFOs": null
+	},
+	{
+		"Name": "Chiff",
+		"ID": 84,
+		"WaveformPath": "WaveForms/generated/chiff.png",
+		"Attack": 100,
+		"Decay": 200,
+		"Sustain": 0.7,
+		"Release": 100,
+		"LFOs": null
+	},
+	{
+		"Name": "Charang",
+		"ID": 85,
+		"WaveformPath": "WaveForms/generated/charang.png",
+		"Attack": 100,
+		"Decay": 200,
+		"Sustain": 0.7,
+		"Release": 100,
+		"LFOs": null
+	},
+	{
+		"Name": "Voice",
+		"ID": 86,
+		"WaveformPath": "WaveForms/generated/voice.png",
+		"Attack": 100,
+		"Decay": 200,
+		"Sustain": 0.7,
+		"Release": 100,
+		"LFOs": null
+	},
+	{
+		"Name": "Fifths",
+		"ID": 87,
+		"WaveformPath": "WaveForms/generated/fifths.png",
+		"Attack": 100,
+		"Decay": 200,
+		"Sustain": 0.7,
+		"Release": 100,
+		"LFOs": null
+	},
+	{
+		"Name": "Bass & Lead",
+		"ID": 88,
+		"WaveformPath": "WaveForms/generated/bass_lead.png",
+		"Attack": 100,
+		"Decay": 200,
+		"Sustain": 0.7,
+		"Release": 100,
+		"LFOs": null
+	}
+]

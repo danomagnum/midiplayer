@@ -1,0 +1,83 @@
+[
+   {
+    "Name": "Soprano Sax",
+    "ID": 65,
+    "WaveformPath": "WaveForms/generated/soprano_sax.png",
+    "Attack": 800,
+    "Decay": 1000,
+    "Sustain": 0.7,
+    "Release": 1200,
+    "LFOs": null
+  },
+  {
+    "Name": "Alto Sax",
+    "ID": 66,
+    "WaveformPath": "WaveForms/generated/alto_sax.png",
+    "Attack": 900,
+    "Decay": 1100,
+    "Sustain": 0.7,
+    "Release": 1300,
+    "LFOs": null
+  },
+  {
+    "Name": "Tenor Sax",
+    "ID": 67,
+    "WaveformPath": "WaveForms/generated/tenor_sax.png",
+    "Attack": 1000,
+    "Decay": 1200,
+    "Sustain": 0.7,
+    "Release": 1400,
+    "LFOs": null
+  },
+  {
+    "Name": "Baritone Sax",
+    "ID": 68,
+    "WaveformPath": "WaveForms/generated/baritone_sax.png",
+    "Attack": 1100,
+    "Decay": 1300,
+    "Sustain": 0.7,
+    "Release": 1500,
+    "LFOs": null
+  },
+  {
+    "Name": "Oboe",
+    "ID": 69,
+    "WaveformPath": "WaveForms/generated/oboe.png",
+    "Attack": 700,
+    "Decay": 900,
+    "Sustain": 0.6,
+    "Release": 1100,
+    "LFOs": null
+  },
+  {
+    "Name": "English Horn",
+    "ID": 70,
+    "WaveformPath": "WaveForms/generated/english_horn.png",
+    "Attack": 800,
+    "Decay": 1000,
+    "Sustain": 0.6,
+    "Release": 1200,
+    "LFOs": null
+  },
+  {
+    "Name": "Bassoon",
+    "ID": 71,
+    "WaveformPath": "WaveForms/generated/bassoon.png",
+    "Attack": 900,
+    "Decay": 1100,
+    "Sustain": 0.6,
+    "Release": 1300,
+    "LFOs": null
+  },
+  {
+    "Name": "Clarinet",
+    "ID": 72,
+    "WaveformPath": "WaveForms/generated/clarinet.png",
+    "Attack": 700,
+    "Decay": 900,
+    "Sustain": 0.7,
+    "Release": 1100,
+    "LFOs": null
+  }
+  
+]

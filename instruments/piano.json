@@ -1,0 +1,83 @@
+[
+
+	{
+		"Name": "Piano",
+		"ID": 1,
+		"WaveformPath": "WaveForms/piano.png",
+		"Attack": 100,
+		"Decay": 5000,
+		"Sustain": 0.2,
+		"Release": 200,
+		"LFOs": null
+	},
+	{
+		"Name": "Bright Acoustic Piano",
+		"ID": 2,
+		"WaveformPath": "WaveForms/generated/bright_acoustic_piano.png",
+		"Attack": 800,
+		"Decay": 800,
+		"Sustain": 0.4,
+		"Release": 200,
+		"LFOs": null
+	},
+	{
+		"Name": "Electric Grand Piano",
+		"ID": 3,
+		"WaveformPath": "WaveForms/generated/electric_grand_piano.png",
+		"Attack": 700,
+		"Decay": 700,
+		"Sustain": 0.5,
+		"Release": 200,
+		"LFOs": null
+	},
+	{
+		"Name": "Honky Tonk Piano",
+		"ID": 4,
+		"WaveformPath": "WaveForms/generated/honky_tonk_piano.png",
+		"Attack": 900,
+		"Decay": 900,
+		"Sustain": 0.3,
+		"Release": 150,
+		"LFOs": null
+	},
+	{
+		"Name": "Electric Piano 1",
+		"ID": 5,
+		"WaveformPath": "WaveForms/generated/electric_piano_1.png",
+		"Attack": 1000,
+		"Decay": 1000,
+		"Sustain": 0.5,
+		"Release": 300,
+		"LFOs": null
+	},
+	{
+		"Name": "Electric Piano 2",
+		"ID": 6,
+		"WaveformPath": "WaveForms/generated/electric_piano_2.png",
+		"Attack": 1000,
+		"Decay": 1000,
+		"Sustain": 0.5,
+		"Release": 300,
+		"LFOs": null
+	},
+	{
+		"Name": "Harpsichord",
+		"ID": 7,
+		"WaveformPath": "WaveForms/generated/harpsichord.png",
+		"Attack": 200,
+		"Decay": 200,
+		"Sustain": 0.7,
+		"Release": 100,
+		"LFOs": null
+	},
+{
+		"Name": "Clavinet",
+		"ID": 8,
+		"WaveformPath": "WaveForms/generated/clavinet.png",
+		"Attack": 100,
+		"Decay": 100,
+		"Sustain": 0.6,
+		"Release": 80,
+		"LFOs": null
+	}
+]

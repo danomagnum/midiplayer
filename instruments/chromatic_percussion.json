@@ -1,0 +1,82 @@
+[
+{
+  "Name": "Celesta",
+  "ID": 9,
+  "WaveformPath": "WaveForms/generated/celesta.png",
+  "Attack": 200,
+  "Decay": 200,
+  "Sustain": 0.7,
+  "Release": 100,
+  "LFOs": null
+},
+{
+  "Name": "Glockenspiel",
+  "ID": 10,
+  "WaveformPath": "WaveForms/generated/glockenspiel.png",
+  "Attack": 100,
+  "Decay": 100,
+  "Sustain": 0.6,
+  "Release": 80,
+  "LFOs": null
+},
+{
+  "Name": "Music Box",
+  "ID": 11,
+  "WaveformPath": "WaveForms/generated/music_box.png",
+  "Attack": 150,
+  "Decay": 150,
+  "Sustain": 0.5,
+  "Release": 100,
+  "LFOs": null
+},
+{
+  "Name": "Vibraphone",
+  "ID": 12,
+  "WaveformPath": "WaveForms/generated/vibraphone.png",
+  "Attack": 300,
+  "Decay": 300,
+  "Sustain": 0.7,
+  "Release": 200,
+  "LFOs": null
+},
+{
+  "Name": "Marimba",
+  "ID": 13,
+  "WaveformPath": "WaveForms/generated/marimba.png",
+  "Attack": 200,
+  "Decay": 200,
+  "Sustain": 0.6,
+  "Release": 120,
+  "LFOs": null
+},
+{
+  "Name": "Xylophone",
+  "ID": 14,
+  "WaveformPath": "WaveForms/generated/xylophone.png",
+  "Attack": 100,
+  "Decay": 100,
+  "Sustain": 0.5,
+  "Release": 80,
+  "LFOs": null
+},
+{
+  "Name": "Tubular Bells",
+  "ID": 15,
+  "WaveformPath": "WaveForms/generated/tubular_bells.png",
+  "Attack": 400,
+  "Decay": 400,
+  "Sustain": 0.8,
+  "Release": 300,
+  "LFOs": null
+},
+{
+  "Name": "Dulcimer",
+  "ID": 16,
+  "WaveformPath": "WaveForms/generated/dulcimer.png",
+  "Attack": 250,
+  "Decay": 250,
+  "Sustain": 0.6,
+  "Release": 120,
+  "LFOs": null
+}
+]

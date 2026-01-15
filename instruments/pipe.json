@@ -1,0 +1,84 @@
+[
+    {
+		"Name": "Piccolo",
+		"ID": 73,
+		"WaveformPath": "WaveForms/generated/piccolo.png",
+		"Attack": 200,
+		"Decay": 400,
+		"Sustain": 0.7,
+		"Release": 300,
+		"LFOs": null
+	},
+	{
+		"Name": "Flute",
+		"ID": 74,
+		"WaveformPath": "WaveForms/generated/flute.png",
+		"Attack": 200,
+		"Decay": 400,
+		"Sustain": 0.7,
+		"Release": 300,
+		"LFOs": null
+	},
+
+	{
+		"Name": "Recorder",
+		"ID": 75,
+		"WaveformPath": "WaveForms/generated/recorder.png",
+		"Attack": 200,
+		"Decay": 400,
+		"Sustain": 0.7,
+		"Release": 300,
+		"LFOs": null
+	},
+	{
+		"Name": "Pan Flute",
+		"ID": 76,
+		"WaveformPath": "WaveForms/generated/pan_flute.png",
+		"Attack": 200,
+		"Decay": 400,
+		"Sustain": 0.7,
+		"Release": 300,
+		"LFOs": null
+	},
+	{
+		"Name": "Blown Bottle",
+		"ID": 77,
+		"WaveformPath": "WaveForms/generated/blown_bottle.png",
+		"Attack": 200,
+		"Decay": 400,
+		"Sustain": 0.7,
+		"Release": 300,
+		"LFOs": null
+	},
+	
+	{
+		"Name": "Shakuhachi",
+		"ID": 78,
+		"WaveformPath": "WaveForms/generated/shakuhachi.png",
+		"Attack": 200,
+		"Decay": 400,
+		"Sustain": 0.7,
+		"Release": 300,
+		"LFOs": null
+	},
+	{
+		"Name": "Whistle",
+		"ID": 79,
+		"WaveformPath": "WaveForms/generated/whistle.png",
+		"Attack": 200,
+		"Decay": 400,
+		"Sustain": 0.7,
+		"Release": 300,
+		"LFOs": null
+	},
+    {
+		"Name": "Ocarina",
+		"ID": 80,
+		"WaveformPath": "WaveForms/generated/ocarina.png",
+		"Attack": 200,
+		"Decay": 400,
+		"Sustain": 0.7,
+		"Release": 300,
+		"LFOs": null
+	}
+]

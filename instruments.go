@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"log/slog"
 	"os"
 	"strings"
 )
@@ -41,13 +42,14 @@ func loadInstrumentsFromDir(dirname string) {
 		if err != nil {
 			panic(err)
 		}
-		var instrDef InstrumentDefinition
+		var instrDef []InstrumentDefinition
 		err = json.Unmarshal(jsonFile, &instrDef)
 		if err != nil {
-			panic(err)
+			slog.Warn("Bad json file", "name", file.Name(), "dir", dirname, "error", err)
 		}
-		instr := NewInstrument(instrDef.WaveformPath, instrDef.Attack, instrDef.Decay, instrDef.Sustain, instrDef.Release, instrDef.LFO)
-		DefaultInstruments[instrDef.ID] = instr
-
+		for _, def := range instrDef {
+			instr := NewInstrument(def.WaveformPath, def.Attack, def.Decay, def.Sustain, def.Release, def.LFO)
+			DefaultInstruments[def.ID] = instr
+		}
 	}
 }

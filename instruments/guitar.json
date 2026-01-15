@@ -1,0 +1,84 @@
+[
+	{
+		"Name": "Acoustic Guitar Nylon",
+		"ID": 25,
+		"WaveformPath": "WaveForms/generated/acoustic_guitar_nylon.png",
+		"Attack": 400,
+		"Decay": 20000,
+		"Sustain": 0.2,
+		"Release": 180,
+		"LFOs": null
+	},
+	{
+		"Name": "Acoustic Guitar Steel",
+		"ID": 26,
+		"WaveformPath": "WaveForms/generated/acoustic_guitar_steel.png",
+		"Attack": 400,
+		"Decay": 2000,
+		"Sustain": 0.85,
+		"Release": 150,
+		"LFOs": null
+	},
+    {
+		"Name": "Electric Guitar Jazz",
+		"ID": 27,
+		"WaveformPath": "WaveForms/generated/electric_guitar_jazz.png",
+		"Attack": 400,
+		"Decay": 2000,
+		"Sustain": 0.8,
+		"Release": 120,
+		"LFOs": null
+	},
+	{
+		"Name": "Electric Guitar Clean",
+		"ID": 28,
+		"WaveformPath": "WaveForms/generated/electric_guitar_clean.png",
+		"Attack": 400,
+		"Decay": 2000,
+		"Sustain": 0.8,
+		"Release": 100,
+		"LFOs": [
+			{"Frequency": 5.5, "Amplitude": 0.04}
+		]
+	},
+    {
+		"Name": "Electric Guitar Muted",
+		"ID": 29,
+		"WaveformPath": "WaveForms/generated/electric_guitar_muted.png",
+		"Attack": 400,
+		"Decay": 2000,
+		"Sustain": 0.8,
+		"Release": 40,
+		"LFOs": null
+	},
+	{
+		"Name": "Overdriven Guitar",
+		"ID": 30,
+		"WaveformPath": "WaveForms/generated/overdriven_guitar.png",
+		"Attack": 400,
+		"Decay": 2000,
+		"Sustain": 0.4,
+		"Release": 60,
+		"LFOs": null
+	},
+	{
+		"Name": "Distortion Guitar",
+		"ID": 31,
+		"WaveformPath": "WaveForms/generated/distortion_guitar.png",
+		"Attack": 400,
+		"Decay": 2000,
+		"Sustain": 0.1,
+		"Release": 60,
+		"LFOs": null
+	},
+	{
+		"Name": "Guitar Harmonics",
+		"ID": 32,
+		"WaveformPath": "WaveForms/generated/guitar_harmonics.png",
+		"Attack": 400,
+		"Decay": 2000,
+		"Sustain": 0.85,
+		"Release": 100,
+		"LFOs": null
+	}
+]
