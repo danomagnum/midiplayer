@@ -67,9 +67,15 @@
 		"WaveformPath": "WaveForms/generated/distortion_guitar.png",
 		"Attack": 400,
 		"Decay": 2000,
-		"Sustain": 0.1,
+		"Sustain": 0.8,
 		"Release": 60,
-		"LFOs": null
+		"LFOs": null,
+		"Distortions": [
+			{"Gain": 2.0, "Order": 1}
+		],
+		"Reverbs": [
+			{"Rate": 44100, "Channels": 2, "Decay": 0.5, "Order": 1}
+		]
 	},
 	{
 		"Name": "Guitar Harmonics",

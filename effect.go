@@ -5,20 +5,26 @@ import "math"
 type Effect func(float32) float32
 type EffectSetup interface {
 	Effect(Note) Effect
+	ApplicationOrder() int
 }
 
 type Reverb struct {
-	rate     uint64
-	channels int
-	decay    float32
+	Rate     uint64
+	Channels int
+	Decay    float32
+	Order    int
+}
+
+func (r *Reverb) ApplicationOrder() int {
+	return r.Order
 }
 
 func (r *Reverb) Effect(note Note) Effect {
 
-	history := make([]float32, r.rate)
+	history := make([]float32, r.Rate)
 	pos := 0
-	channels := r.channels
-	if r.channels == 0 {
+	channels := r.Channels
+	if r.Channels == 0 {
 		channels = 1
 	}
 
@@ -31,7 +37,7 @@ func (r *Reverb) Effect(note Note) Effect {
 		p0 := pos
 		new := float32(0)
 		for i := 0; i < channels; i++ {
-			new += history[(p0+offsets[i])%len(history)] * (r.decay / float32(channels))
+			new += history[(p0+offsets[i])%len(history)] * (r.Decay / float32(channels))
 		}
 		out := in + new
 		history[pos] = out
@@ -43,6 +49,11 @@ func (r *Reverb) Effect(note Note) Effect {
 type LFO struct {
 	Frequency float64
 	Amplitude float64
+	Order     int
+}
+
+func (lfo *LFO) ApplicationOrder() int {
+	return lfo.Order
 }
 
 func (lfo *LFO) Effect(note Note) Effect {
@@ -51,4 +62,25 @@ func (lfo *LFO) Effect(note Note) Effect {
 		x = x*lfo.Amplitude + (1.0 - lfo.Amplitude)
 		return in * float32(x)
 	}
+}
+
+type Distortion struct {
+	Gain  float32
+	Order int
+}
+
+func (d *Distortion) Effect(note Note) Effect {
+	return func(in float32) float32 {
+		out := in * d.Gain
+		if out > 1.0 {
+			out = 1.0
+		} else if out < -1.0 {
+			out = -1.0
+		}
+		return out
+	}
+}
+
+func (d *Distortion) ApplicationOrder() int {
+	return d.Order
 }

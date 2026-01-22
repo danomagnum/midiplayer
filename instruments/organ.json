@@ -8,8 +8,8 @@
 		"Sustain": 1.0,
 		"Release": 4000,
 		"LFOs": [
-			{"Frequency": 5.0, "Amplitude": 0.1},
-			{"Frequency": 7.0, "Amplitude": 0.1}
+			{"Frequency": 5.0, "Amplitude": 0.1, "Order": 2},
+			{"Frequency": 7.0, "Amplitude": 0.1, "Order": 3}
 		]
 	},
 	{

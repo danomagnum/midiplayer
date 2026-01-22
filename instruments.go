@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"log/slog"
 	"os"
+	"slices"
 	"strings"
 )
 
@@ -17,6 +18,7 @@ type InstrumentDefinition struct {
 	Release      uint64
 	LFOs         []LFO
 	Reverbs      []Reverb
+	Distortions  []Distortion
 }
 
 var DefaultInstruments = map[int]Instrument{}
@@ -51,18 +53,26 @@ func loadInstrumentsFromDir(dirname string) {
 		for _, def := range instrDef {
 			instr := NewInstrument(def.WaveformPath, def.Attack, def.Decay, def.Sustain, def.Release)
 
+			effects := make([]EffectSetup, 0)
 			for _, l := range def.LFOs {
-				instr.Effects = append(instr.Effects, &l)
+				effects = append(effects, &l)
 			}
 			for _, reverb := range def.Reverbs {
-				instr.Effects = append(instr.Effects, &reverb)
+				effects = append(effects, &reverb)
 			}
+			for _, distortion := range def.Distortions {
+				effects = append(effects, &distortion)
+			}
+			slices.SortFunc(effects, func(x, y EffectSetup) int {
+				return x.ApplicationOrder() - y.ApplicationOrder()
+			})
+			instr.Effects = effects
 			DefaultInstruments[def.ID] = instr
 		}
 	}
 
 	piano := DefaultInstruments[1]
-	piano.Effects = append(piano.Effects, &Reverb{rate: 10000, decay: 1.0, channels: 5})
+	piano.Effects = append(piano.Effects, &Reverb{Rate: 10000, Decay: 1.0, Channels: 5})
 	DefaultInstruments[2] = piano
 
 }
