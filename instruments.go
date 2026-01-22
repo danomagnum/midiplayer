@@ -52,4 +52,9 @@ func loadInstrumentsFromDir(dirname string) {
 			DefaultInstruments[def.ID] = instr
 		}
 	}
+
+	piano := DefaultInstruments[1]
+	piano.Effects = append(piano.Effects, &Reverb{rate: 10000, decay: 1.0, channels: 5})
+	DefaultInstruments[2] = piano
+
 }

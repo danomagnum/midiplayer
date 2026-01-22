@@ -12,8 +12,6 @@ type Tone struct {
 	Frequency float64
 }
 
-type Effect func(in float32) float32
-
 type WaveTable struct {
 	WaveForm []float32
 }

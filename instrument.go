@@ -14,6 +14,7 @@ type Instrument struct {
 	Sustain float32
 	Release uint64
 	LFO     []LFO
+	Effects []EffectSetup
 }
 
 func NewInstrument(filename string, attack, decay uint64, sustain float32, release uint64, lfo []LFO) Instrument {
@@ -25,6 +26,7 @@ func NewInstrument(filename string, attack, decay uint64, sustain float32, relea
 		Sustain: sustain,
 		Release: release,
 		LFO:     lfo,
+		Effects: make([]EffectSetup, 0),
 	}
 }
 

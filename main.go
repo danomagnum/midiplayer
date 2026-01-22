@@ -25,14 +25,22 @@ func main() {
 	}
 	defer c.Close()
 
-	i := DefaultInstruments[96]
+	instrumentid := 1
 	for _, t := range songData.notes {
 		l, ok := tape[t.Start]
+		i := DefaultInstruments[instrumentid]
+		instrumentid++
+		if instrumentid > 2 {
+			instrumentid = 1
+		}
 		t.Instrument = &i
 		if ok {
 			l = append(l, t)
 			tape[t.Start] = l
 			continue
+		}
+		for _, effect := range i.Effects {
+			t.Effects = append(t.Effects, effect.Effect(t))
 		}
 		tape[t.Start] = []Note{t}
 	}
@@ -96,6 +104,9 @@ func synth(out []float32) (int, error) {
 				delete(activeNotes, id)
 				fmt.Printf("Note %s ending at %d. %d left\n", n.Tone.Name, coreTick, len(activeNotes))
 			}
+			for _, effect := range n.Effects {
+				x = effect(x)
+			}
 			out[i] += x * 0.1
 		}
 		coreTick++
@@ -113,4 +124,5 @@ type Note struct {
 	Tone       Tone
 	Start      uint64
 	End        uint64
+	Effects    []Effect
 }
