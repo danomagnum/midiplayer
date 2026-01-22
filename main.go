@@ -25,14 +25,10 @@ func main() {
 	}
 	defer c.Close()
 
-	instrumentid := 1
+	instrumentid := 17
 	for _, t := range songData.notes {
 		l, ok := tape[t.Start]
 		i := DefaultInstruments[instrumentid]
-		instrumentid++
-		if instrumentid > 2 {
-			instrumentid = 1
-		}
 		t.Instrument = &i
 		if ok {
 			l = append(l, t)

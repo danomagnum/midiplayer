@@ -1,33 +1,30 @@
 package main
 
-import "math"
-
-type LFO struct {
-	Frequency float64
-	Amplitude float64
-}
-
 type Instrument struct {
 	Wave    WaveTable
 	Attack  uint64
 	Decay   uint64
 	Sustain float32
 	Release uint64
-	LFO     []LFO
 	Effects []EffectSetup
 }
 
 func NewInstrument(filename string, attack, decay uint64, sustain float32, release uint64, lfo []LFO) Instrument {
 	wave := load(filename)
-	return Instrument{
+	inst := Instrument{
 		Wave:    wave,
 		Attack:  attack,
 		Decay:   decay,
 		Sustain: sustain,
 		Release: release,
-		LFO:     lfo,
 		Effects: make([]EffectSetup, 0),
 	}
+
+	for _, l := range lfo {
+		inst.Effects = append(inst.Effects, &l)
+	}
+
+	return inst
 }
 
 func (inst *Instrument) adsr(tick uint64, note Note) float32 {
@@ -57,20 +54,4 @@ func (inst *Instrument) adsr(tick uint64, note Note) float32 {
 		return 0.0
 	}
 
-}
-
-func (inst *Instrument) lfo(tick uint64) float32 {
-	if len(inst.LFO) == 0 {
-		return 1.0
-	}
-	out := 1.0
-	for _, v := range inst.LFO {
-
-		x := math.Sin(2 * math.Pi * float64(tick) * v.Frequency / baseRate)
-		// scale from amplitude to 1.0
-		x = x*v.Amplitude + (1.0 - v.Amplitude)
-		out *= x
-
-	}
-	return float32(out)
 }

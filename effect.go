@@ -1,5 +1,7 @@
 package main
 
+import "math"
+
 type Effect func(float32) float32
 type EffectSetup interface {
 	Effect(Note) Effect
@@ -35,5 +37,18 @@ func (r *Reverb) Effect(note Note) Effect {
 		history[pos] = out
 		pos = (pos + 1) % len(history)
 		return out
+	}
+}
+
+type LFO struct {
+	Frequency float64
+	Amplitude float64
+}
+
+func (lfo *LFO) Effect(note Note) Effect {
+	return func(in float32) float32 {
+		x := math.Sin(2 * math.Pi * float64(coreTick) * lfo.Frequency / baseRate)
+		x = x*lfo.Amplitude + (1.0 - lfo.Amplitude)
+		return in * float32(x)
 	}
 }

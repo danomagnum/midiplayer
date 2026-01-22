@@ -15,7 +15,7 @@ type InstrumentDefinition struct {
 	Decay        uint64
 	Sustain      float32
 	Release      uint64
-	LFO          []LFO
+	LFOs         []LFO
 }
 
 var DefaultInstruments = map[int]Instrument{}
@@ -48,7 +48,7 @@ func loadInstrumentsFromDir(dirname string) {
 			slog.Warn("Bad json file", "name", file.Name(), "dir", dirname, "error", err)
 		}
 		for _, def := range instrDef {
-			instr := NewInstrument(def.WaveformPath, def.Attack, def.Decay, def.Sustain, def.Release, def.LFO)
+			instr := NewInstrument(def.WaveformPath, def.Attack, def.Decay, def.Sustain, def.Release, def.LFOs)
 			DefaultInstruments[def.ID] = instr
 		}
 	}
