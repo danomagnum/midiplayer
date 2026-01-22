@@ -9,7 +9,7 @@ type Instrument struct {
 	Effects []EffectSetup
 }
 
-func NewInstrument(filename string, attack, decay uint64, sustain float32, release uint64, lfo []LFO) Instrument {
+func NewInstrument(filename string, attack, decay uint64, sustain float32, release uint64) Instrument {
 	wave := load(filename)
 	inst := Instrument{
 		Wave:    wave,
@@ -18,10 +18,6 @@ func NewInstrument(filename string, attack, decay uint64, sustain float32, relea
 		Sustain: sustain,
 		Release: release,
 		Effects: make([]EffectSetup, 0),
-	}
-
-	for _, l := range lfo {
-		inst.Effects = append(inst.Effects, &l)
 	}
 
 	return inst
